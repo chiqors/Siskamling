@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 // namespace
-use App\Kelas;
+use App\Pos;
 
-class KelasController extends Controller
+class PosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class KelasController extends Controller
     public function index()
     {
         //$data['kelas'] = \App\Kelas::all();
-        $data['kelas'] = Kelas::all();
+        $data['pos'] = Pos::all();
         
-        return view('kelas.index')->with($data);
+        return view('pos.index')->with($data);
     }
 
     /**
@@ -28,7 +28,7 @@ class KelasController extends Controller
      */
     public function create()
     {
-        return view('kelas.form');
+        return view('pos.form');
     }
 
     /**
@@ -41,11 +41,11 @@ class KelasController extends Controller
     {
         $input = $request->all(); // Mengambil semua request dari form
         
-        $status = \App\Kelas::create($input);
+        $status = \App\Pos::create($input);
         if ($status) {
-            return redirect('kelas')->with('success', 'Data Berhasil ditambahkan');
+            return redirect('pos')->with('success', 'Data Berhasil ditambahkan');
         } else {
-            return redirect('kelas')->with('error', 'Data Gagal ditambahkan');
+            return redirect('pos')->with('error', 'Data Gagal ditambahkan');
         }
     }
     /**
@@ -68,8 +68,8 @@ class KelasController extends Controller
     public function edit($id)
     {
         $data['edit'] = true;
-        $data['result'] = \App\Kelas::where('id_kelas', $id)->first();
-        return view('kelas.form')->with($data);
+        $data['result'] = \App\Pos::where('id_pos', $id)->first();
+        return view('pos.form')->with($data);
     }
 
     /**
@@ -83,11 +83,11 @@ class KelasController extends Controller
     {
         $input = $request->all(); // Mengambil semua request dari form
         
-        $status = \App\Kelas::where('id_kelas', $id)->first()->update($input);
+        $status = \App\Pos::where('id_pos', $id)->first()->update($input);
         if ($status) {
-            return redirect('kelas')->with('success', 'Data Berhasil diubah');
+            return redirect('pos')->with('success', 'Data Berhasil diubah');
         } else {
-            return redirect('kelas/' . $id . '/edit')->with('error', 'Data Gagal diubah');
+            return redirect('pos/' . $id . '/edit')->with('error', 'Data Gagal diubah');
         }
     }
 

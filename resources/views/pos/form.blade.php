@@ -4,13 +4,13 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        {{ empty($edit) ? 'Tambah' : 'Edit'}} Data Kelas
-        <small>SMK Negeri 4 Bandung</small>
+        {{ empty($edit) ? 'Tambah' : 'Edit'}} Data Pos
+        <small>Sistem Kamling</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{ url('kelas') }}">Data Kelas</a></li>
-        <li class="active">{{ empty($edit) ? 'Tambah' : 'Edit'}} Kelas</li>
+        <li><a href="{{ url('pos') }}">Data Pos</a></li>
+        <li class="active">{{ empty($edit) ? 'Tambah' : 'Edit'}} Pos</li>
       </ol>
     </section>
 
@@ -24,7 +24,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <a href="{{ url('kelas') }}" class="btn btn-info"><i class="fa fa-chevron-left"></i> Kembali</a>
+          <a href="{{ url('pos') }}" class="btn btn-info"><i class="fa fa-chevron-left"></i> Kembali</a>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -34,20 +34,15 @@
           </div>
         </div>
           <div class="box-body">
-            <form action="" method="POST" action="{{ empty($edit) ? url('kelas/add') : url('kelas/' . @$result->id_kelas . '/edit') }}" role="form">
+            <form action="" method="POST" action="{{ empty($edit) ? url('pos/add') : url('pos/' . @$result->id_pos . '/edit') }}" role="form">
               {{ csrf_field() }}
               
               @if(!empty($result))
                 {{ method_field('PATCH') }}
               @endif
-              
               <div class="form-group">
-                <label for="namakelas">Nama Kelas</label>
-                <input type="text" class="form-control" name="nama_kelas" id="nama_kelas" placeholder="Kelas.." value="{{ @$result->nama_kelas }}">
-              </div>
-              <div class="form-group">
-                <label for="jurusan">Jurusan</label>
-                <input type="text" class="form-control" name="jurusan" id="Jurusan" placeholder="Jurusan.." value="{{ @$result->jurusan }}">
+                <label for="lokasi">Lokasi</label>
+                <textarea class="form-control" name="lokasi" id="Lokasi" placeholder="Lokasi..">{{ @$result->jurusan }}</textarea>
               </div>
           </div>
           <!-- /.box-body -->

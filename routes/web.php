@@ -27,9 +27,9 @@ Route::get('/', function () {
 });*/
 
 // cara method ke controller fungsi
-Route::get('/pos', 'KelasController@index');
-Route::get('/pos/add', 'KelasController@create');
-Route::post('/pos/add', 'KelasController@store');
+Route::get('/pos', 'PosController@index');
+Route::get('/pos/add', 'PosController@create');
+Route::post('/pos/add', 'PosController@store');
 
-Route::get('/pos/{id}/edit', 'KelasController@edit');
-Route::patch('/pos/{id}/edit', 'KelasController@update');
+Route::get('/pos/{id}/edit', 'PosController@edit');
+Route::patch('/pos/{id}/edit', 'PosController@update');
