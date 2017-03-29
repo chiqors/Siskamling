@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// namespace
 use App\Pos;
 
 class PosController extends Controller
@@ -15,8 +14,7 @@ class PosController extends Controller
      */
     public function index()
     {
-        //$data['kelas'] = \App\Kelas::all();
-        $data['pos'] = Pos::all();
+        $data['pos'] = \App\Pos::all();
         
         return view('pos.index')->with($data);
     }
