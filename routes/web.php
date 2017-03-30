@@ -24,6 +24,11 @@ Route::get('/pos/{id}/edit', 'PosController@edit');
 Route::patch('/pos/{id}/edit', 'PosController@update');
 Route::get('/pos/{id}/delete', 'PosController@destroy');
 
+/* Tugas Routes */
+Route::get('/tugas', 'TugasController@index');
+Route::get('/tugas/add', 'TugasController@create');
+Route::post('/tugas/add', 'TugasController@store');
+
 Route::get('/tugas/{id}/edit', 'TugasController@edit');
 Route::patch('/tugas/{id}/edit', 'TugasController@update');
 Route::get('/tugas/{id}/delete', 'TugasController@destroy');
