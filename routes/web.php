@@ -24,10 +24,14 @@ Route::get('/pos/{id}/edit', 'PosController@edit');
 Route::patch('/pos/{id}/edit', 'PosController@update');
 Route::get('/pos/{id}/delete', 'PosController@destroy');
 
+<<<<<<< HEAD
 /* Tugas Routes */
 Route::get('/tugas', 'TugasController@index');
 Route::get('/tugas/add', 'TugasController@create');
 Route::post('/tugas/add', 'TugasController@store');
+=======
+Route::get('/home', 'PosController@index');
+>>>>>>> aa4c0d3784022d4ec8742532b182372d8131553e
 
 Route::get('/tugas/{id}/edit', 'TugasController@edit');
 Route::patch('/tugas/{id}/edit', 'TugasController@update');
