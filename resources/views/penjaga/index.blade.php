@@ -37,6 +37,7 @@
             <thead>
               <tr>
                 <th>Nomor Penjaga</th>
+                <th>Foto</th>
                 <th>Nama Penjaga</th>
                 <th>Alamat</th>
                 <th>Action</th>
@@ -47,6 +48,9 @@
               <tr>
                 <!-- <td>{{ $row->id_kelas }}</td> -->
                 <td>{{ $row->no_penjaga }}</td>
+                <td>
+                  <img src="{{ asset('uploads/'.@$row->avatar) }}" width="80px" class="img" />
+                </td>
                 <td>{{ $row->nama_penjaga }}</td>
                 <td>{{ $row->alamat }}</td>
                 <td>

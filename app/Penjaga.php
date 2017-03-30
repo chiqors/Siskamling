@@ -9,7 +9,7 @@ class Penjaga extends Model
     protected $table = 't_penjaga';
     public $primaryKey = 'no_penjaga';
     
-    protected $fillable = ['nama_penjaga','alamat'];
+    protected $fillable = ['avatar','nama_penjaga','alamat'];
     
     public $timestamps = false;
 }

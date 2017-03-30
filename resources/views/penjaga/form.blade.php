@@ -34,12 +34,17 @@
           </div>
         </div>
           <div class="box-body">
-            <form method="POST" action="{{ empty($edit) ? url('penjaga/add') : url('penjaga/' . @$result->no_penjaga . '/edit') }}" role="form">
+            <form method="POST" enctype="multipart/form-data" action="{{ empty($edit) ? url('penjaga/add') : url('penjaga/' . @$result->no_penjaga . '/edit') }}" role="form">
               {{ csrf_field() }}
               
               @if(!empty($result))
                 {{ method_field('PATCH') }}
               @endif
+              
+              <div class="form-group">
+                <label for="">Foto</label>
+                <input type="file" name="avatar" />
+              </div>
               <div class="form-group">
                 <label for="">Nama Penjaga</label>
                 <input type="text" class="form-control" name="nama_penjaga" id="Nama_penjaga" placeholder="Nama Penjaga.." value="{{ @$result->nama_penjaga }}" />

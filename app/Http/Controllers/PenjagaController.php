@@ -37,9 +37,23 @@ class PenjagaController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all(); // Mengambil semua request dari form
+        $rules = [
+            'avatar' => 'mimes:jpeg,png|max:512',
+            'nama_penjaga' => 'required|max:100',
+            'alamat' => ''
+        ];
+        $this->validate($request, $rules);
+        
+        $input = $request->all();
+        
+        if($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+            $filename = $input['nama_penjaga'] . "." . $request->file('avatar')->getClientOriginalExtension();
+            $request->file('avatar')->storeAs('', $filename);
+            $input['avatar'] = $filename;
+        }
         
         $status = \App\Penjaga::create($input);
+        
         if ($status) {
             return redirect('penjaga')->with('success', 'Data Berhasil ditambahkan');
         } else {
@@ -79,7 +93,20 @@ class PenjagaController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $rules = [
+            'avatar' => 'mimes:jpeg,png|max:512',
+            'nama_penjaga' => 'required|max:100',
+            'alamat' => ''
+        ];
+        $this->validate($request, $rules);
+        
         $input = $request->all(); // Mengambil semua request dari form
+        
+        if($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+            $filename = $input['nama_penjaga'] . "." . $request->file('avatar')->getClientOriginalExtension();
+            $request->file('avatar')->storeAs('', $filename);
+            $input['avatar'] = $filename;
+        }
         
         $status = \App\Penjaga::where('no_penjaga', $id)->first()->update($input);
         if ($status) {
