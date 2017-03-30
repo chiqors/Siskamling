@@ -33,3 +33,6 @@ Route::post('/pos/add', 'PosController@store');
 
 Route::get('/pos/{id}/edit', 'PosController@edit');
 Route::patch('/pos/{id}/edit', 'PosController@update');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
