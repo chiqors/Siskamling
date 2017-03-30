@@ -97,6 +97,8 @@ class PosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pos = \App\Pos::find($id);
+        $pos->delete();
+        return redirect('pos')->with('success',"Data berhasil di hapus");
     }
 }

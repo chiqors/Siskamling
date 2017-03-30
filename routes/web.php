@@ -33,3 +33,5 @@ Route::post('/pos/add', 'PosController@store');
 
 Route::get('/pos/{id}/edit', 'PosController@edit');
 Route::patch('/pos/{id}/edit', 'PosController@update');
+
+Route::get('/pos/{id}/delete', 'PosController@destroy');

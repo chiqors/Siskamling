@@ -48,7 +48,7 @@
                 <td>{{ $row->lokasi }}</td>
                 <td>
                   <a href="{{ url('pos/' . $row->id_pos . '/edit') }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                  <a href="" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                  <a href="{{ url('pos/' . $row->id_pos . '/delete') }}" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
                 </td>
               </tr>
               @endforeach
