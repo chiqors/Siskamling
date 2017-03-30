@@ -27,6 +27,6 @@ class CreateTabelPenjaga extends Migration
      */
     public function down()
     {
-        Schema::drop('t_tugas');
+        Schema::drop('t_penjaga');
     }
 }
