@@ -15,6 +15,7 @@ class CreateTabelPenjaga extends Migration
     {
         Schema::create('t_penjaga', function(Blueprint $table) {
             $table->increments('no_penjaga');
+            $table->string('avatar', 100);
             $table->string('nama_penjaga', 100);
             $table->string('alamat', 100);
         });
