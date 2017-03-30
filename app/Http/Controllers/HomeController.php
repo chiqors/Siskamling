@@ -24,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         // return view('home');
-        $data['jadwal'] = \App\Jadwal::all();
+        $data['result'] = \App\Home::all();
         
         return view('home')->with($data);
     }
