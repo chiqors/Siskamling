@@ -15,26 +15,42 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// cara manual
-/*Route::get('/belajar', function () {
-    //cara 1
-    //$nama = "Chiqo"; // without it, will be removed
-    //return view('hello', compact('nama'));
-    
-    //cara 2
-    $data['nama'] = "Chiqo"; // if u want nothing data, here : $data[];
-    return view('hello')->with($data);
-});*/
-
-// cara method ke controller fungsi
+/* Pos Routes */
 Route::get('/pos', 'PosController@index');
 Route::get('/pos/add', 'PosController@create');
 Route::post('/pos/add', 'PosController@store');
 
 Route::get('/pos/{id}/edit', 'PosController@edit');
 Route::patch('/pos/{id}/edit', 'PosController@update');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
 Route::get('/pos/{id}/delete', 'PosController@destroy');
+
+/* Tugas Routes */
+Route::get('/tugas', 'TugasController@index');
+Route::get('/tugas/add', 'TugasController@create');
+Route::post('/tugas/add', 'TugasController@store');
+
+Route::get('/tugas/{id}/edit', 'TugasController@edit');
+Route::patch('/tugas/{id}/edit', 'TugasController@update');
+Route::get('/tugas/{id}/delete', 'TugasController@destroy');
+
+/* Jadwal Routes */
+Route::get('/jadwal', 'JadwalController@index');
+Route::get('/jadwal/add', 'JadwalController@create');
+Route::post('/jadwal/add', 'JadwalController@store');
+
+Route::get('/jadwal/{id}/edit', 'JadwalController@edit');
+Route::patch('/jadwal/{id}/edit', 'JadwalController@update');
+Route::get('/jadwal/{id}/delete', 'JadwalController@destroy');
+
+/* Penjaga Routes */
+Route::get('/penjaga', 'PenjagaController@index');
+Route::get('/penjaga/add', 'PenjagaController@create');
+Route::post('/penjaga/add', 'PenjagaController@store');
+
+Route::get('/penjaga/{id}/edit', 'PenjagaController@edit');
+Route::patch('/penjaga/{id}/edit', 'PenjagaController@update');
+Route::get('/penjaga/{id}/delete', 'PenjagaController@destroy');
+
+/* Auth Routes */
+Auth::routes();
+Route::get('/home', 'HomeController@index');

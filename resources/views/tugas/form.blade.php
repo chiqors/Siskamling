@@ -4,13 +4,13 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        {{ empty($edit) ? 'Tambah' : 'Edit'}} Data Pos
+        {{ empty($edit) ? 'Tambah' : 'Edit'}} Data Tugas
         <small>Sistem Kamling</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="{{ url('pos') }}">Data Pos</a></li>
-        <li class="active">{{ empty($edit) ? 'Tambah' : 'Edit'}} Pos</li>
+        <li><a href="{{ url('tugas') }}">Data Tugas</a></li>
+        <li class="active">{{ empty($edit) ? 'Tambah' : 'Edit'}} Tugas</li>
       </ol>
     </section>
 
@@ -24,7 +24,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <a href="{{ url('pos') }}" class="btn btn-info"><i class="fa fa-chevron-left"></i> Kembali</a>
+          <a href="{{ url('tugas') }}" class="btn btn-info"><i class="fa fa-chevron-left"></i> Kembali</a>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -34,15 +34,15 @@
           </div>
         </div>
           <div class="box-body">
-            <form method="POST" action="{{ empty($edit) ? url('pos/add') : url('pos/' . @$result->id_pos . '/edit') }}" role="form">
+            <form action="" method="POST" action="{{ empty($edit) ? url('tugas/add') : url('tugas/' . @$result->id_tugas . '/edit') }}" role="form">
               {{ csrf_field() }}
               
               @if(!empty($result))
                 {{ method_field('PATCH') }}
               @endif
               <div class="form-group">
-                <label for="">Lokasi </label>
-                <input type="text" class="form-control" name="lokasi" id="Lokasi" placeholder="Lokasi.." />{{ @$result->lokasi }}
+                <label for="tugas">Nama Tugas</label>
+                <input type="text" class="form-control" name="nama_tugas" id="Nama_tugas" placeholder="Tugas.." value="{{ @$result->nama_tugas }}" />
               </div>
           </div>
           <!-- /.box-body -->

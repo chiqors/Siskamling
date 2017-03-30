@@ -232,10 +232,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pos"><i class="fa fa-circle-o"></i> Pos</a></li>
-            <li><a href="penjaga"><i class="fa fa-circle-o"></i> Penjaga</a></li>
-            <li><a href="tugas"><i class="fa fa-circle-o"></i> Tugas</a></li>
-            <li><a href="jadwal"><i class="fa fa-circle-o"></i> Jadwal</a></li>
+            <li><a href="{{url("/pos")}}"><i class="fa fa-circle-o"></i> Pos</a></li>
+            <li><a href="{{url("/penjaga")}}"><i class="fa fa-circle-o"></i> Penjaga</a></li>
+            <li><a href="{{url("/tugas")}}"><i class="fa fa-circle-o"></i> Tugas</a></li>
+            <li><a href="{{url("/jadwal")}}"><i class="fa fa-circle-o"></i> Jadwal</a></li>
           </ul>
         </li>
         <li class="header">LABELS</li>

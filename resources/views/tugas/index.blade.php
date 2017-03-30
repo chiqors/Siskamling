@@ -4,12 +4,12 @@
 <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Pos
+        Data Tugas
         <small>Sistem Kamling</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Data Pos</li>
+        <li class="active">Data Tugas</li>
       </ol>
     </section>
 
@@ -23,7 +23,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <a href="{{ url('pos/add') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
+          <a href="{{ url('tugas/add') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data</a>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -36,20 +36,20 @@
           <table class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th>Nomor Pos</th>
-                <th>Lokasi</th>
+                <th>Nomor Tugas</th>
+                <th>Nama Tugas</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              @foreach($pos as $row)
+              @foreach($tugas as $row)
               <tr>
                 <!-- <td>{{ $row->id_kelas }}</td> -->
-                <td>{{ $row->id_pos }}</td>
-                <td>{{ $row->lokasi }}</td>
+                <td>{{ $row->id_tugas }}</td>
+                <td>{{ $row->nama_tugas }}</td>
                 <td>
-                  <a href="{{ url('pos/' . $row->id_pos . '/edit') }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                  <a href="{{ url('pos/' . $row->id_pos . '/delete') }}" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                  <a href="{{ url('tugas/' . $row->id_tugas . '/edit') }}" class="btn btn-warning"><i class="fa fa-pencil"></i> Edit</a>
+                  <a href="{{ url('tugas/' . $row->id_tugas . '/delete') }}" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
                 </td>
               </tr>
               @endforeach
