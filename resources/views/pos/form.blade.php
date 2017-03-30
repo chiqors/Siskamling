@@ -42,7 +42,7 @@
               @endif
               <div class="form-group">
                 <label for="lokasi">Lokasi</label>
-                <textarea class="form-control" name="lokasi" id="Lokasi" placeholder="Lokasi..">{{ @$result->jurusan }}</textarea>
+                <textarea class="form-control" name="lokasi" id="Lokasi" placeholder="Lokasi..">{{ @$result->lokasi }}</textarea>
               </div>
           </div>
           <!-- /.box-body -->
