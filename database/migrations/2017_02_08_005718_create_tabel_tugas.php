@@ -15,8 +15,7 @@ class CreateTabelTugas extends Migration
     {
         Schema::create('t_tugas', function(Blueprint $table) {
             $table->increments('id_tugas');
-            $table->string('nama_wilayah', 100);
-            $table->string('lokasi', 100);
+            $table->string('nama_tugas', 100);
         });
     }
 

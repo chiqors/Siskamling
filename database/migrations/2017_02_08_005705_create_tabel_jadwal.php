@@ -17,7 +17,7 @@ class CreateTabelJadwal extends Migration
             $table->increments('id_jadwal');
             $table->string('mulai', 100);
             $table->string('selesai', 100);
-            $table->string('tanggal', 100);
+            $table->date('tanggal');
             $table->integer('id_pos');
             $table->integer('id_tugas');
             $table->integer('no_penjaga');
