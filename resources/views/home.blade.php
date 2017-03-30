@@ -1,17 +1,62 @@
-@extends('layouts.app')
+@extends('template.header')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+<!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Data jadwal
+        <small>Sistem Kamling</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Data Pos</li>
+      </ol>
+    </section>
 
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
+    <!-- Main content -->
+    <section class="content">
+      @if(session('success'))
+      <div class="alert alert-success">
+        <p>{{ session('success') }}</p>
+      </div>
+      @endif
+      <!-- Default box -->
+      <div class="box">
+        <div class="box-header with-border">
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
         </div>
-    </div>
-</div>
+        <div class="box-body">
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+                <!-- TODO HERE -->
+            </tbody>
+          </table>
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+          Footer
+        </div>
+        <!-- /.box-footer-->
+      </div>
+      <!-- /.box -->
+
+    </section>
+    <!-- /.content -->
 @endsection
+
+@push("style")
+<!-- <link rel="stylesheet" href="datepicker.css" /> -->
+@endpush
+
+@push('script')
+<!-- <script type="text/javascript" href="bootstrap.js"></script> -->
+@endpush
