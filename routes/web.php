@@ -11,9 +11,17 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('pos/index');
 });
+
+Route::auth();
+
+
+//Route Group -> link ke Login
+
+Route::group(['middleware'=>'auth'], function() {
 
 /* Pos Routes */
 Route::get('/pos', 'PosController@index');
@@ -51,6 +59,5 @@ Route::get('/penjaga/{id}/edit', 'PenjagaController@edit');
 Route::patch('/penjaga/{id}/edit', 'PenjagaController@update');
 Route::get('/penjaga/{id}/delete', 'PenjagaController@destroy');
 
-/* Auth Routes */
-Auth::routes();
-Route::get('/home', 'HomeController@index');
+});
+

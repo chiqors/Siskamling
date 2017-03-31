@@ -279,12 +279,12 @@ class ComposerStaticInitc7bd87e058f035f1616eeaed6c8e0bed
 
     public static $classMap = array (
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreateTUser' => __DIR__ . '/../..' . '/database/migrations/2017_03_30_135213_create_t_user.php',
         'CreateTabelJadwal' => __DIR__ . '/../..' . '/database/migrations/2017_02_08_005705_create_tabel_jadwal.php',
         'CreateTabelPenjaga' => __DIR__ . '/../..' . '/database/migrations/2017_02_08_005644_create_tabel_penjaga.php',
         'CreateTabelPos' => __DIR__ . '/../..' . '/database/migrations/2017_02_08_005713_create_tabel_pos.php',
         'CreateTabelTugas' => __DIR__ . '/../..' . '/database/migrations/2017_02_08_005718_create_tabel_tugas.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
-        'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -357,6 +357,7 @@ class ComposerStaticInitc7bd87e058f035f1616eeaed6c8e0bed
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'JadwalSeeder' => __DIR__ . '/../..' . '/database/seeds/JadwalSeeder.php',
+        'LoginSeeder' => __DIR__ . '/../..' . '/database/seeds/LoginSeeder.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
         'PHPUnit\\Framework\\TestCase' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',

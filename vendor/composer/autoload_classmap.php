@@ -7,12 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateTUser' => $baseDir . '/database/migrations/2017_03_30_135213_create_t_user.php',
     'CreateTabelJadwal' => $baseDir . '/database/migrations/2017_02_08_005705_create_tabel_jadwal.php',
     'CreateTabelPenjaga' => $baseDir . '/database/migrations/2017_02_08_005644_create_tabel_penjaga.php',
     'CreateTabelPos' => $baseDir . '/database/migrations/2017_02_08_005713_create_tabel_pos.php',
     'CreateTabelTugas' => $baseDir . '/database/migrations/2017_02_08_005718_create_tabel_tugas.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
-    'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
@@ -85,6 +85,7 @@ return array(
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
     'JadwalSeeder' => $baseDir . '/database/seeds/JadwalSeeder.php',
+    'LoginSeeder' => $baseDir . '/database/seeds/LoginSeeder.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\BaseTestListener' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
     'PHPUnit\\Framework\\TestCase' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/TestCase.php',

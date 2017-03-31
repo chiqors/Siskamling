@@ -135,7 +135,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{ asset('assets') }}/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">PENTUNGAN</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -168,13 +168,9 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                  </a>
-                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
+                  <form action="{{ url('logout') }}" method="POST">
+                        {{ csrf_field() }}
+                        <button type="submit" class="btn btn-default btn-flat">Logout</button>
                   </form>
                 </div>
               </li>

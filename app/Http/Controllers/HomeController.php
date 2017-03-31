@@ -23,9 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // return view('home');
-        $data['result'] = \App\Home::all();
-        
-        return view('home')->with($data);
+        return view('home');
     }
 }
