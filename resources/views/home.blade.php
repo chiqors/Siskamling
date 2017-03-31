@@ -76,7 +76,7 @@
                           for ($j=0; $j <count($arrPerson[$arrDate[$i]]) ; $j++) { 
                             # code...
                             echo "<td>".$arrPerson[$arrDate[$i]][$j]."</td>";
-                          }
+                          }     
                       // }else{
                       //   echo "<tr>".$arrPerson[$i][$i]."</tr>";
                       // }

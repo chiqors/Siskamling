@@ -11,10 +11,7 @@
 |
 */
 
-
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'HomeController@index');
 
 Route::auth();
 
@@ -61,5 +58,5 @@ Route::get('/penjaga/{id}/delete', 'PenjagaController@destroy');
 
 Route::get('/logout', 'DashboardController@logout');
 
-Route::get('home', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 });
