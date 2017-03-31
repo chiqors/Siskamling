@@ -135,7 +135,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="{{ asset('assets') }}/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">PENTUNGAN</span>
+              <span class="hidden-xs">{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->username }}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -143,8 +143,8 @@
                 <img src="{{ asset('assets') }}/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  {{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->username }}}
+                  <small>Member SMKN 4 Bandung</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -168,10 +168,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <form action="{{ url('logout') }}" method="POST">
-                        {{ csrf_field() }}
-                        <button type="submit" class="btn btn-default btn-flat">Logout</button>
-                  </form>
+                  <a href="{{ url('logout') }}" class="btn btn-default btn-flat">Logout</a>
                 </div>
               </li>
             </ul>
@@ -197,7 +194,7 @@
           <img src="{{ asset('assets') }}/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>{{{ isset(Auth::user()->name) ? Auth::user()->name : Auth::user()->username }}}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -216,35 +213,20 @@
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="../index.html"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-          </ul>
+          <li><a href=" {{ url('home') }} "><i class="fa fa-dashboard"></i> Dashboard</a></li>
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Forms</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{url("/pos")}}"><i class="fa fa-circle-o"></i> Pos</a></li>
-            <li><a href="{{url("/penjaga")}}"><i class="fa fa-circle-o"></i> Penjaga</a></li>
-            <li><a href="{{url("/tugas")}}"><i class="fa fa-circle-o"></i> Tugas</a></li>
-            <li><a href="{{url("/jadwal")}}"><i class="fa fa-circle-o"></i> Jadwal</a></li>
-          </ul>
+          <li><a href="{{url("/pos")}}"><i class="fa fa-map-marker"></i> Pos</a></li>
         </li>
-        <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        <li class="treeview">
+            <li><a href="{{url("/penjaga")}}"><i class="fa fa-user"></i> Penjaga</a></li>
+        </li>
+        <li class="treeview">
+            <li><a href="{{url("/tugas")}}"><i class="fa fa-tags"></i> Tugas</a></li>
+        </li>
+        <li class="treeview">
+            <li><a href="{{url("/jadwal")}}"><i class="fa fa-calendar"></i> Jadwal</a></li>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

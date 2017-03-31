@@ -47,4 +47,11 @@ class LoginController extends Controller
     public function password(){
         return 'password';
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        
+        return redirect('login');
+    } 
 }

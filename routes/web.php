@@ -13,7 +13,7 @@
 
 
 Route::get('/', function () {
-    return view('pos/index');
+    return view('home');
 });
 
 Route::auth();
@@ -59,5 +59,7 @@ Route::get('/penjaga/{id}/edit', 'PenjagaController@edit');
 Route::patch('/penjaga/{id}/edit', 'PenjagaController@update');
 Route::get('/penjaga/{id}/delete', 'PenjagaController@destroy');
 
-});
+Route::get('/logout', 'DashboardController@logout');
 
+Route::get('home', 'HomeController@index');
+});
